@@ -1,6 +1,7 @@
 var gulp         = require('gulp'),
+		jade         = require('gulp-jade'),
 	  sass         = require('gulp-sass'),
-	  browserSync  = require('browser-sync'),
+  	browserSync  = require('browser-sync'),
 	  concat       = require('gulp-concat'),
   	uglify       = require('gulp-uglifyjs'),
 	  del          = require('del');
@@ -9,19 +10,20 @@ var gulp         = require('gulp'),
 	  autoprefixer = require('gulp-autoprefixer'),
  	  imagemin     = require('gulp-imagemin');
 
+gulp.task('jade', function() {
+	gulp.src('src/**/*.jade')
+		.pipe(jade())
+	.pipe(gulp.dest('dist/'))
+});
+
 gulp.task('sass', function() {
 	return gulp.src('src/sass/**/*.sass')
 		.pipe(sass())
 		.pipe(autoprefixer(['last 15 versions', '> 1%']))
-		.pipe(gulp.dest('src/css'))
+		.pipe(cssmin())
+		.pipe(gulp.dest('dist/css'))
+		.pipe(rename({suffix: '.min'}))
 		.pipe(browserSync.reload({stream: true}))
-});
-
-gulp.task('cssmin', ['sass'], function() {
-	return gulp.src('src/css/main.css')
-	.pipe(cssmin())
-	.pipe(rename({suffix: '.min'}))
-	.pipe(gulp.dest('src/css'));
 });
 
 gulp.task('browser-sync', function() {
