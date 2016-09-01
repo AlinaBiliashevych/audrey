@@ -17,7 +17,7 @@ gulp.task('jade', function() {
 });
 
 gulp.task('sass', function() {
-	return gulp.src('src/sass/**/*.sass')
+	return gulp.src('src/assets/styles/**/*.sass')
 		.pipe(sass())
 		.pipe(autoprefixer(['last 15 versions', '> 1%']))
 		.pipe(cssmin())
@@ -45,14 +45,14 @@ gulp.task('clean', function() {
 	return del.sync('dist');
 });
 
-gulp.task('watch', ['browser-sync', 'cssmin', 'scripts', 'csslibs'], function() {
+gulp.task('watch', ['browser-sync', 'cssmin', 'csslibs'], function() {
 	gulp.watch('src/sass/**/*.sass', ['sass']);
 	gulp.watch('src/css/**/*.css', ['cssmin']);
 	gulp.watch('src/*.html', browserSync.reload);
 	gulp.watch('src/js/**/*.js', browserSync.reload);
 });
 
-gulp.task('build', ['clean', 'sass', 'scripts', 'imagemin'], function() {
+gulp.task('build', ['clean', 'jade', 'sass', 'imagemin'], function() {
 	var buildCss = gulp.src([
 		'src/css/main.min.css',
 	])
