@@ -1,1 +1,18 @@
+.center-wrapper
+	overflow: hidden
 
+.overlay
+	display: none
+	+media(pho-ptab)
+		display: block
+		width: 100%
+		height: 100vh
+		top: 0
+		left: 0
+		z-index: 2
+		transition: background 0.3s ease
+		pointer-events: none
+		position: fixed
+		&.visible
+			background: rgba(0,0,0,0.5)
+			pointer-events: all

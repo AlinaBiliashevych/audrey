@@ -1,0 +1,121 @@
+.header
+	display: table
+	width: 100%
+	background-color: #7ccdca
+	position: relative
+	background-image: url(../img/header-audrey.png)
+	background-size: 40% auto
+	background-position: right bottom
+	background-repeat: no-repeat
+	height: 100vh
+	&:after
+		content: url(../img/header-dots1.png)
+		position: absolute
+		width: 100%
+		top: 0
+		right: 0
+		text-align: right
+	+media(pho-ptab)
+		overflow: hidden
+
+.header__menu
+	background-color: white
+	display: table-cell
+	height: 100%
+	width: auto
+	max-width: 240px
+	padding: 65px 0 65px 65px
+	box-sizing: border-box
+	overflow: hidden
+	+media(ltab)
+		padding-left: 45px
+	+media(pho-ptab)
+		z-index: 10
+		margin: 0px -10px
+		padding-left: 24px
+		position: absolute
+		left: 0px
+		transform: translateX(-100%)
+		will-change: transform
+		transition-duration: 0.3s
+		transition-property: transform
+		transition-timing-function: ease
+		overflow-y: auto
+		&.opened
+			transform: none
+			transition: 0.3s transform ease
+
+
+
+.menu__item
+	position: relative
+	cursor: pointer
+	margin-bottom: 100px
+	+media(pho-ptab)
+		margin-bottom: 32px
+
+.item__icon
+	width: 32px
+	height: 30px
+	background-image: url(../menu-icon1.gif)
+	background-size: auto 100%
+	background-repeat: no-repeat
+	background-position: center
+	display: inline-block
+	&.icon-book
+		background-image: url(../img/icon-book.png)
+	&.icon-film
+		background-image: url(../img/icon-film.png)
+	&.icon-mask
+		background-image: url(../img/icon-mask.png)
+	&.icon-oscar
+		background-image: url(../img/icon-oscar.png)	
+
+.item__text
+	display: inline-block
+	padding: 6px 40px
+	vertical-align: top
+	font-size: 20px
+	+media(pho-ptab)
+		padding: 6px 40px 6px 16px
+
+.header__text-wrapper
+	display: inline-block
+	vertical-align: top
+	color: white
+	padding: 90px 0 0 70px
+	width: 35%
+	letter-spacing: 1px
+	+media(ltab)
+		padding: 0 0 0 32px
+	+media(pho-ptab)
+		width: 100%
+		box-sizing: border-box
+		padding: 90px 16px 0 16px
+		text-align: left
+
+
+.text_size-xl
+	font-size: 100px
+	font-family: PlayfairDisplay-Bold
+	+media(ltab)
+		font-size: 75px
+	+media(ptab)
+		font-size: 90px
+	+media(pho-phab)
+		font-size: 32px
+
+.text_size-m
+	font-size: 25px
+	font-family: FuturaBookC
+	margin: 30px 0 12px 0
+	+media(ptab)
+		margin: 32px auto 24px
+	+media(pho-phab)
+		font-size: 15px
+		margin: 24px auto 16px
+
+.text_size-s
+	font-size: 12px
+	font-family: futura-bold
+	font-weight: bold

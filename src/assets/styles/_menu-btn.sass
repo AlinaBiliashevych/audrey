@@ -1,0 +1,101 @@
+.header__menu-btn
+  display: none
+  +media(pho-ptab)
+    height: 40px
+    width: 40px
+    display: block
+    padding: 16px 0 0 12px
+    margin: 0
+    top: 0
+    left: 0
+    -webkit-tap-highlight-color: transparent
+    background: transparent
+    float: left
+    font-size: 15px
+    border: none
+    text-shadow: none
+    color: #ffffff
+    box-shadow: none
+    position: absolute
+    z-index: 402
+    &:hover
+      background: transparent
+      color: white
+    .icon-menu:before
+      margin: 0
+
+.hamburger-box
+  position: relative
+
+.hamburger .hamburger-inner, .hamburger .hamburger-inner:after, .hamburger .hamburger-inner:before
+  background-color: #fff
+
+.header  .hamburger-inner, .header  .hamburger-inner:after, .header  .hamburger-inner:before
+  background-color: #fff
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+  position: absolute
+  width: 24px
+  height: 3px
+  -webkit-transition-timing-function: ease
+  -moz-transition-timing-function: ease
+  -o-transition-timing-function: ease
+  transition-timing-function: ease
+  -webkit-transition-duration: .35s
+  -moz-transition-duration: .35s
+  -o-transition-duration: .35s
+  transition-duration: .35s
+  transition-property: -webkit-transform
+  transition-property: transform
+  -webkit-transition-property: transform
+  -moz-transition-property: transform
+  -o-transition-property: transform
+  transition-property: transform,-webkit-transform
+  background: white
+
+.hamburger-inner
+  top: 50%
+  display: block
+  margin-top: -2px
+
+.hamburger-inner:before
+  top: 8px
+  -webkit-transition-timing-function: ease
+  -moz-transition-timing-function: ease
+  -o-transition-timing-function: ease
+  transition-timing-function: ease
+  -webkit-transition-duration: .2s
+  -moz-transition-duration: .2s
+  -o-transition-duration: .2s
+  transition-duration: .2s
+  -webkit-transition-property: opacity,-webkit-transform
+  -moz-transition-property: opacity,-webkit-transform
+  -o-transition-property: opacity,-webkit-transform
+  transition-property: opacity,-webkit-transform
+  transition-property: transform,opacity
+  transition-property: transform,opacity,-webkit-transform
+
+.hamburger-inner:after, .hamburger-inner:before
+  display: block
+  content: ''
+
+.hamburger-inner:after
+  top: 16px
+
+.hamburger-inner:after
+  bottom: -10px
+
+.is-active .hamburger-inner
+  -webkit-transform: translate3d(0,8px,0) rotate(45deg)
+  transform: translate3d(0,8px,0) rotate(45deg)
+  background-color: #bdbdbd
+
+.is-active .hamburger-inner:before
+  -webkit-transform: rotate(-45deg) translate3d(-5.71429px,-6px,0)
+  transform: rotate(-45deg) translate3d(-5.71429px,-6px,0)
+  opacity: 0
+
+.is-active .hamburger-inner:after
+  -webkit-transform: translate3d(0,-16px,0) rotate(-90deg)
+  transform: translate3d(0,-16px,0) rotate(-90deg)
+  background-color: #bdbdbd
