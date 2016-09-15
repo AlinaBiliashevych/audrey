@@ -113,8 +113,14 @@ gulp.task('clean', function() {
 
 gulp.task('copy:fonts', function() {
   return gulp
-    .src('src/fonts/*.{ttf,eot,woff,woff2}')
+    .src('src/fonts/*.{ttf,eot,woff,woff2,otf}')
     .pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('copy:js', function() {
+  return gulp
+    .src('src/js/**/*.js')
+    .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('copy:lib', function() {
@@ -132,7 +138,8 @@ gulp.task('copy:img', function() {
 gulp.task('copy', [
     'copy:img',
     'copy:lib',
-    'copy:fonts'
+    'copy:fonts',
+    'copy:js'
 ]);
 
 gulp.task('copy:watch', function() {
