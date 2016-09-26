@@ -1,26 +1,26 @@
-body
-	.center-wrapper
-		.overlay
-		.header
-			.button.header__menu-btn#phone-menu-open
-				.hamburger-box
-					.hamburger-inner
-			.header__menu
++b.center-wrapper
+	+b.overlay
+	+b.header
+		+b.button.header__menu-btn#phone-menu-open
+			.hamburger-box
+				.hamburger-inner
+		+e.menu
+			+b.menu
+				+e.item
+					+e.SPAN.icon.icon-book
+					+e.text biography
 				.menu__item
-					span.item__icon.icon-book
-					.item__text biography
+					+e.SPAN.icon.icon-film
+					+e.text filmography
 				.menu__item
-					span.item__icon.icon-film
-					.item__text filmography
+					+e.SPAN.icon.icon-mask
+					+e.text secrets
 				.menu__item
-					span.item__icon.icon-mask
-					.item__text secrets
-				.menu__item
-					span.item__icon.icon-oscar
-					.item__text avards
+					+e.SPAN.icon.icon-oscar
+					+e.text avards
 
-			.header__text-wrapper
-				.text.text_size-xl Audrey Hepburn
-				.text.text_size-m «The most beautiful woman of all time»
-				.text.text_size-s Woman magazine
-				.text.text_size-s 2006
+		+e.text-wrapper
+			.text.text_size-xl Audrey Hepburn
+			.text.text_size-m «The most beautiful woman of all time»
+			.text.text_size-s Woman magazine
+			.text.text_size-s 2006
