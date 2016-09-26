@@ -1,0 +1,111 @@
+mixin new-comment(name, text)
+  article.media
+    figure.media-left
+      p.image.is-64x64
+        img(src="http://placehold.it/128x128")
+    .media-content
+      .content
+        p 
+          strong #{name}
+          br
+          | #{text}
+          br
+          small
+            a Like
+             · 
+            a Reply
+             · 
+            | 3 hrs
+
+.comments-block-wrapper
+  .comments-block
+
+    article.media.comment
+      figure.media-left
+        p.image.is-64x64.comment-img
+          img(src="http://placehold.it/128x128")
+      .media-content
+        p.control
+          textarea.textarea(placeholder="Add a comment...")
+        p.control
+          button.button Post comment
+
+    article.media.comment.comment--negative
+      figure.media-left
+        p.image.is-64x64.comment-img
+          img(src="http://placehold.it/128x128")
+      .media-content
+        .content
+          p 
+            strong Barbara Middleton
+            br
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            | Duis porta eros lacus, nec ultricies elit blandit non. 
+            | Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
+            br
+            small
+              a Like
+               · 
+              a Reply
+               · 
+              | 3 hrs
+
+    article.media.comment.comment--positive
+      figure.media-left
+        p.image.is-64x64.comment-img
+          img(src="http://placehold.it/128x128")
+      .media-content
+        .content
+          p 
+            strong Barbara Middleton
+            br
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            | Duis porta eros lacus, nec ultricies elit blandit non. 
+            | Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
+            br
+            small
+              a Like
+               · 
+              a Reply
+               · 
+              | 3 hrs
+
+        article.media.comment.comment--positive
+          figure.media-left
+            p.image.is-48x48.comment-img
+              img(src="http://placehold.it/128x128")
+          .media-content
+            .content
+              p 
+                strong Barbara Middleton
+                br
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                | Duis porta eros lacus, nec ultricies elit blandit non. 
+                | Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
+                br
+                small
+                  a Like
+                   · 
+                  a Reply
+                   · 
+                  | 3 hrs
+
+    article.media.comment.comment--positive
+      figure.media-left
+        p.image.is-64x64.comment-img
+          img(src="http://placehold.it/128x128")
+      .media-content
+        .content
+          p 
+            strong Barbara Middleton
+            br
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            | Duis porta eros lacus, nec ultricies elit blandit non. 
+            | Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
+            br
+            small
+              a Like
+               · 
+              a Reply
+               · 
+              | 3 hrs
