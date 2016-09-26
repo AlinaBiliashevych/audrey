@@ -33,6 +33,7 @@
 		z-index: 10
 		margin: 0px -10px
 		padding-left: 24px
+		padding-bottom: 24px
 		position: absolute
 		left: 0px
 		transform: translateX(-100%)
@@ -40,11 +41,13 @@
 		transition-duration: 0.3s
 		transition-property: transform
 		transition-timing-function: ease
-		overflow-y: auto
 		&.opened
 			transform: none
 			transition: 0.3s transform ease
 
+.menu
+	overflow-y: auto
+	max-height: 100%
 
 
 .menu__item
