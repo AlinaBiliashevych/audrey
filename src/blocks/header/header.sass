@@ -3,13 +3,13 @@
 	width: 100%
 	background-color: #7ccdca
 	position: relative
-	background-image: url(../img/header-audrey.png)
+	background-image: url(../img/header/audrey-header.png)
 	background-size: 40% auto
 	background-position: right bottom
 	background-repeat: no-repeat
 	height: 100vh
 	&:after
-		content: url(../img/header-dots1.png)
+		content: url(../img/header/header-dots.png)
 		position: absolute
 		width: 100%
 		top: 0
@@ -46,8 +46,9 @@
 			transition: 0.3s transform ease
 
 .menu
-	overflow-y: auto
-	max-height: 100%
+	+media(pho-phab)
+		overflow-y: auto
+		max-height: 100%
 
 
 .menu__item
@@ -60,19 +61,18 @@
 .menu__icon
 	width: 32px
 	height: 30px
-	background-image: url(../menu-icon1.gif)
 	background-size: auto 100%
 	background-repeat: no-repeat
 	background-position: center
 	display: inline-block
 	&.icon-book
-		background-image: url(../img/icon-book.png)
+		background-image: url(../img/icons/icon-book.png)
 	&.icon-film
-		background-image: url(../img/icon-film.png)
+		background-image: url(../img/icons/icon-film.png)
 	&.icon-mask
-		background-image: url(../img/icon-mask.png)
+		background-image: url(../img/icons/icon-mask.png)
 	&.icon-oscar
-		background-image: url(../img/icon-oscar.png)	
+		background-image: url(../img/icons/icon-oscar.png)	
 
 .menu__text
 	display: inline-block
