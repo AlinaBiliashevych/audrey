@@ -144,6 +144,8 @@ gulp.task('copy', [
 
 gulp.task('copy:watch', function() {
     gulp.watch('src/img/*', ['copy']);
+    gulp.watch('src/vendor/*', ['copy']);
+    gulp.watch('src/js/*', ['copy']);
 });
 
 gulp.task('watch',

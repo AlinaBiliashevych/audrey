@@ -34,6 +34,7 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
-    "bemto.jade": "^1.0.3"
+    "bemto.jade": "^1.0.3",
+    "bulma": "^0.2.1"
   }
 }
