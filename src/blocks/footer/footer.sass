@@ -1,2 +1,82 @@
 .footer
   background-image: url(../img/footer-bg.png)
+  background-repeat: no-repeat
+  height: 100vh
+  position: relative
+  padding: 0 !important
+  text-align: center
+  +media(ptab)
+  	background-size: cover
+  +media(pho-phab)
+  	height: 300px
+  	background-size: cover
+
+.shade
+	content: ''
+	position: absolute
+	width: 100%
+	height: 100%
+	background-color: #000
+	opacity: 0.5
+	top: 0
+	left: 0
+	pointer-events: none
+	z-index: 1
+
+.quote
+	font-size: 45px
+	margin: 20% auto 0
+	color: white
+	position: relative
+	z-index: 2
+	display: inline-block
+	+media(pho-phab)
+		font-size: 20px
+	+media(ppho)
+		margin-top: 110px
+	&:before
+		content: open-quote
+		color: #77d9d3
+		font-size: 70px
+		position: absolute
+		top: -100%
+		display: block
+		width: 100%
+		+media(pho-phab)
+			font-size: 40px
+	&:after
+		content: close-quote
+		color: #77d9d3
+		font-size: 70px
+		position: absolute
+		bottom: -100%
+		display: block
+		width: 100%
+		+media(pho-phab)
+			font-size: 40px
+
+.navigation
+	position: absolute
+	z-index: 2
+	bottom: 50px
+	display: inline-block
+	left: 50%
+	transform: translateX(-50%)
+	white-space: nowrap
+	+media(pho-phab)
+		bottom: 24px
+	
+.navigation__item
+	display: inline-block
+	font-size: 20px
+	color: #77d9d3
+	margin-right: 50px
+	cursor: pointer
+	&:last-child
+		margin-right: 0
+	+media(ptab)
+		font-size: 16px
+	+media(pho-phab)
+		margin-right: 8px
+		font-size: 15px
+
