@@ -1,0 +1,40 @@
+@mixin clear
+	display: table
+	clear: both
+	content: ''
+
+@mixin grid($width, $height)
+	position: relative
+	float: left
+	width: $width
+	height: 0
+	padding-top: $height
+	box-sizing: border-box
+	overflow: hidden
+
+
+.grid
+	display: block
+	width: 100%
+
+	&:after
+		+clear
+
+	&__col-1-1
+		+grid(25%, 25%)
+
+	&__col-2-2
+		+grid(50%, 50%)
+
+	&__col-2-1
+		+grid(50%, 25%)
+
+
+	&__col-1-2
+		+grid(25%, 50%)
+
+	&__col-2-4
+		+grid(50%, 100%)
+
+.right
+	float: right
