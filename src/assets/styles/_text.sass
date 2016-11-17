@@ -1,0 +1,43 @@
+.text
+	+block
+	flex-direction: column
+	padding: 12.3%
+	box-sizing: border-box
+	font-family: "FuturaBook", sans-serif
+	font-size: 1.5vw
+	line-height: 1.8
+	color: #202020
+
+	&--bright
+		background: #77d9d3
+
+	&--post-v
+		height: auto
+
+	&--post-h
+		position: static
+		height: auto
+		padding: 0
+
+	p
+		margin: 0
+		margin-bottom: 6%
+		width: 100%
+
+	p:first-of-type::first-letter
+		float: left
+		font-family: $font-family
+		font-size: 4.5vw
+		line-height: 1.2
+		font-weight: bold
+		margin: 0 3% 0 0
+
+	&--simple
+		p:first-of-type::first-letter
+			float: none
+			display: inline
+			font-family: inherit
+			font-size: inherit
+			line-height: inherit
+			font-weight: inherit
+			margin: inherit
