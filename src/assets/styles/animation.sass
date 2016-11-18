@@ -1,0 +1,30 @@
+@keyframes mask
+	50%
+		top: 0
+		left: -117%
+	100%
+		top: 0
+		left: 100%
+.mask
+	animation: mask 2s
+	animation-fill-mode: forwards
+
+@keyframes mask--right
+	50%
+		top: 0
+		left: 97%
+	100%
+		top: 0
+		left: -120%
+.mask--right
+	animation: mask--right 2s
+	animation-fill-mode: forwards
+
+@keyframes show
+	99%
+		opacity: 0
+	100%
+		opacity: 1
+.show
+	animation: show 1.3s
+	animation-fill-mode: forwards
