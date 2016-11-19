@@ -3,7 +3,7 @@ var gulp         = require('gulp'),
 		jade         = require('gulp-jade'),
 
 	  sass         = require('gulp-sass'),
-		sourcemaps    = require('gulp-sourcemaps'),
+		sourcemaps   = require('gulp-sourcemaps'),
 		postcss      = require('gulp-postcss'),
 		mqpacker     = require('css-mqpacker'),
 
@@ -11,7 +11,9 @@ var gulp         = require('gulp'),
 	  del          = require('del'),
 	  autoprefixer = require('autoprefixer'),
  	  imagemin     = require('gulp-imagemin'),
-		runSequence = require('run-sequence');
+		runSequence  = require('run-sequence'),
+    svgSprite    = require('gulp-svg-sprite');
+
 
 /*===================JADE==================*/
 
@@ -103,6 +105,31 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest('dist/img'));
 });
 
+/*===================SVG SPRITE=====================*/
+
+
+var config          = {
+    shape       : {
+        dimension   : {     // Set maximum dimensions 
+            maxWidth  : 32,
+            maxHeight : 30
+        }
+    },
+    mode        : {
+        css       : {   // Activate the «css» mode 
+            render    : {
+                css   : true  // Activate CSS output (with default options) 
+            }
+        }
+    }
+};
+gulp.task('svg-sprite', function() {
+  gulp.src('src/img/icons/*.svg')
+    .pipe(svgSprite(config))
+    .pipe(gulp.dest('dist/img/icons'));
+
+})
+
 /*====================CLEAN=========================*/
 
 gulp.task('clean', function() {
@@ -161,6 +188,7 @@ gulp.task('build', function() {
 			'sass',
 			'jade',
 			'copy',
-			'imagemin'
+			'imagemin',
+      'svg-sprite'
 	);
 });

@@ -4,10 +4,12 @@
 	background-color: #7ccdca
 	position: relative
 	background-image: url(../img/header/audrey-header.png)
-	background-size: 40% auto
+	background-size: 30% auto
 	background-position: right bottom
 	background-repeat: no-repeat
 	height: 100vh
+	overflow: hidden
+
 	&:after
 		content: url(../img/header/header-dots1.png)
 		position: absolute
@@ -15,8 +17,6 @@
 		top: 0
 		right: 0
 		text-align: right
-	+media(pho-ptab)
-		overflow: hidden
 
 .header__menu
 	background-color: white
@@ -27,29 +27,27 @@
 	padding: 65px 0 65px 65px
 	box-sizing: border-box
 	overflow: hidden
+	z-index: 7
+	margin: 0px -10px
+	padding-left: 24px
+	padding-bottom: 24px
+	position: absolute
+	left: 0px
+	transform: translateX(-100%)
+	will-change: transform
+	transition-duration: 0.3s
+	transition-property: transform
+	transition-timing-function: ease
+	&.opened
+		transform: none
+		transition: 0.3s transform ease
 	+media(ltab)
 		padding-left: 45px
-	+media(pho-ptab)
-		z-index: 7
-		margin: 0px -10px
-		padding-left: 24px
-		padding-bottom: 24px
-		position: absolute
-		left: 0px
-		transform: translateX(-100%)
-		will-change: transform
-		transition-duration: 0.3s
-		transition-property: transform
-		transition-timing-function: ease
-		&.opened
-			transform: none
-			transition: 0.3s transform ease
 
 .menu
-	+media(pho-phab)
-		overflow-y: auto
-		overflow-x: hidden
-		max-height: 100%
+	overflow-y: auto
+	overflow-x: hidden
+	max-height: 100%
 
 
 .menu__item
@@ -57,49 +55,38 @@
 	cursor: pointer
 	margin-bottom: 80px
 	white-space: nowrap
-	+media(pho-ptab)
-		margin-bottom: 32px
+	margin-bottom: 32px
 
 .menu__icon
-	width: 32px
+	width: 30px
 	height: 30px
 	background-size: auto 100%
 	background-repeat: no-repeat
 	background-position: center
 	display: inline-block
-	&--book
-		background-image: url(../img/icons/icon-book.png)
-	&--film
-		background-image: url(../img/icons/icon-film.png)
-	&--mask
-		background-image: url(../img/icons/icon-mask.png)
-	&--oscar
-		background-image: url(../img/icons/icon-oscar.png)	
-	&--comment
-		background-image: url(../img/icons/comment.png)
+	
 
 .menu__text
 	display: inline-block
-	padding: 6px 40px
 	vertical-align: top
 	font-size: 20px
-	+media(pho-ptab)
-		padding: 6px 40px 6px 16px
+	padding: 2px 40px 6px 16px
 
 .header__text-wrapper
 	display: inline-block
 	vertical-align: top
 	color: white
-	padding: 90px 0 0 70px
-	width: 35%
+	padding: 90px 0px 0 240px
+	width: 100%
 	letter-spacing: 1px
+	box-sizing: border-box
+	text-align: left
 	+media(ltab)
 		padding: 0 0 0 32px
-	+media(pho-ptab)
-		width: 100%
-		box-sizing: border-box
+	+media(pho-phab)
 		padding: 90px 16px 0 16px
-		text-align: left
+		width: 100%
+
 
 
 .text-xl

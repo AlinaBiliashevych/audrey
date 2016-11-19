@@ -1,27 +1,25 @@
 .header__menu-btn
-  display: none
-  +media(pho-ptab)
-    height: 40px
-    width: 40px
-    display: block
-    padding: 16px 0 0 12px
-    margin: 0
-    top: 0
-    left: 0
-    -webkit-tap-highlight-color: transparent
+  height: 40px
+  width: 40px
+  display: block
+  padding: 16px 0 0 12px
+  margin: 0
+  top: 0
+  left: 0
+  -webkit-tap-highlight-color: transparent
+  background: transparent
+  float: left
+  font-size: 15px
+  border: none
+  text-shadow: none
+  color: #ffffff
+  box-shadow: none
+  position: absolute
+  z-index: 8
+  &:hover
     background: transparent
-    float: left
-    font-size: 15px
-    border: none
-    text-shadow: none
-    color: #ffffff
-    box-shadow: none
-    position: absolute
-    z-index: 8
-    &:hover
-      background: transparent
-      color: white
-    .icon-menu:before
+    color: white
+  .icon-menu:before
       margin: 0
 
 .hamburger-box
