@@ -26,5 +26,6 @@ $(function () {
 		$(".menu__item").on('click', function() {
 			var scrollTo = $(".jss-" + $(this).children(".menu__icon").data("scroll")).offset().top;
 			$("html, body").animate({ scrollTop: scrollTo });
+			toggleMenu();
 		})
 })
