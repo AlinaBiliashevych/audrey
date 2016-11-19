@@ -1,0 +1,58 @@
+@keyframes mask
+	50%
+		top: 0
+		left: -117%
+	100%
+		top: 0
+		left: 100%
+.animate .image__mask
+	animation: mask 2s
+	animation-fill-mode: forwards
+
+@keyframes mask--right
+	50%
+		top: 0
+		left: 97%
+	100%
+		top: 0
+		left: -120%
+.animate .image__mask--right
+	animation: mask--right 2s
+	animation-fill-mode: forwards
+
+@keyframes show
+	99%
+		opacity: 0
+	100%
+		opacity: 1
+.animate .image__overlay
+	animation: show 1.3s
+	animation-fill-mode: forwards
+
+@keyframes slide
+	50%
+		left: 0
+	100%
+		left: 20px
+
+.animate .image__item
+	animation: slide 2.5s
+	animation-fill-mode: forwards
+
+@keyframes slide--right
+	50%
+		left: 0
+	100%
+		left: -20px
+
+.animate .image__item--right
+	animation: slide--right 2.5s
+	animation-fill-mode: forwards
+
+@keyframes text-show
+	100%
+		opacity: 1
+		top: 0
+.animate .text__content
+	animation: text-show 1.3s
+	animation-fill-mode: forwards

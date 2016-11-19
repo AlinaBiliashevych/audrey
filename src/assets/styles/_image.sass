@@ -22,6 +22,18 @@
 		&--bright
 			background: rgba(119,217,211,.6)
 
+	&__mask
+		position: absolute
+		width: 120%
+		height: 100%
+		background-color: #77d9d3
+		top: 100%
+		transition: top 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0s, left 0.4s cubic-bezier(0.77, 0, 0.175, 1) 0.3s
+		left: -117%
+
+		&--right
+			left: 97%
+
 	&__item
 		position: absolute
 		top: 0
@@ -29,3 +41,15 @@
 		z-index: -1
 		width: 100%
 		height: 100% !important
+		transform: scale(1.1)
+
+.js-scene-1 .image__overlay,
+.js-scene-2 .image__overlay,
+.js-scene-3 .image__overlay,
+.js-scene-3-2 .image__overlay,
+.js-scene-4 .image__overlay,
+.js-scene-5 .image__overlay,
+.js-scene-6 .image__overlay,
+.js-scene-7 .image__overlay,
+.js-scene-8 .image__overlay
+	opacity: 0
