@@ -21,10 +21,6 @@ $(function() {
         reverse: false
     	})
 		.setClassToggle('.js-scene-1', 'animate')
-		.addIndicators()
-		.on("progress", function (e) {
-			console.log(e.progress.toFixed(3));
-		})
 		.addTo(controller);
 });
 /*========================S2=================================*/
