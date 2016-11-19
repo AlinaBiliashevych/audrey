@@ -12,6 +12,16 @@ section.films
 				p "
 		+e.col-2-2
 			+b.video
+				+e.wrap
+					+e.player
+						+e.trigger(id="video-trigger")
+							+e.play(id="play-video" href="#")
+								+e.item
+									+e.btn-wrap
+										+e("img").btn(src="img/film/youtube-play-button.svg")
+									+e.text Roman Holiday. 1953
+						+e.inner
+							iframe(id="video" width="600" height="600" src="https://www.youtube.com/embed/4DsjLyOZXl0?rel=0" frameborder="0" allowfullscreen)
 	+b.grid
 		+b.post-film2
 			+b.text--post-h
