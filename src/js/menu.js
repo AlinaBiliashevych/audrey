@@ -25,7 +25,7 @@ $(function () {
 
 		$(".jss-scrollto").on('click', function() {
 			var scrollTo = $(".jss-" + $(this).data("scroll")).offset().top;
-			$("html, body").animate({ scrollTop: scrollTo });
+			$("html, body").animate({ scrollTop: scrollTo }, scrollTo);
 			toggleMenu();
 		})
 })
