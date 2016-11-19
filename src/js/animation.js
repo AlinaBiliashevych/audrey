@@ -145,3 +145,53 @@ $(function() {
 		.setClassToggle('.js-scene-8', 'animate')
 		.addTo(controller);
 });
+
+/*==========================title==============================*/
+$(function() {
+    	var controller = new ScrollMagic.Controller();
+    	var scene = new ScrollMagic.Scene({
+    		triggerElement: ".title--bio h2",
+    		duration: 0,
+    		triggerHook: 0.6,
+    		offset: 0,
+        reverse: false
+    	})
+		.setClassToggle('.title--bio', 'title--animate')
+		.addTo(controller);
+});
+$(function() {
+    	var controller = new ScrollMagic.Controller();
+    	var scene = new ScrollMagic.Scene({
+    		triggerElement: ".title--film h2",
+    		duration: 0,
+    		triggerHook: 0.6,
+    		offset: 0,
+        reverse: false
+    	})
+		.setClassToggle('.title--film', 'title--animate')
+		.addTo(controller);
+});
+$(function() {
+    	var controller = new ScrollMagic.Controller();
+    	var scene = new ScrollMagic.Scene({
+    		triggerElement: ".title--secret h2",
+    		duration: 0,
+    		triggerHook: 0.6,
+    		offset: 0,
+        reverse: false
+    	})
+		.setClassToggle('.title--secret', 'title--animate')
+		.addTo(controller);
+});
+$(function() {
+    	var controller = new ScrollMagic.Controller();
+    	var scene = new ScrollMagic.Scene({
+    		triggerElement: ".title--awards h2",
+    		duration: 0,
+    		triggerHook: 0.6,
+    		offset: 0,
+        reverse: false
+    	})
+		.setClassToggle('.title--awards', 'title--animate')
+		.addTo(controller);
+});
