@@ -19,7 +19,12 @@ $(function () {
 		function toggleMenu() {
 			$("#phone-menu-open").toggleClass("is-active");
 			$(".header__menu").toggleClass('opened');
-			$(".overlay").toggleClass('visible');
-			$("body").toggleClass('no-scroll');
+			// $(".overlay").toggleClass('visible');
+			// $("body").toggleClass('no-scroll');
 		}
+
+		$(".menu__item").on('click', function() {
+			var scrollTo = $(".jss-" + $(this).children(".menu__icon").data("scroll")).offset().top;
+			$("html, body").animate({ scrollTop: scrollTo });
+		})
 })
