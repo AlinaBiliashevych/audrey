@@ -3,7 +3,7 @@ section.bio
 		+e.col-2-2.jss-bio
 			+b.title--light.--bio
 				.menu__icon.svg-book
-				h2 Biography
+				h2(data-letters="Biography") Biography
 		+e.col-2-2
 			+b.text
 				+e.content
@@ -17,13 +17,13 @@ section.bio
 		+e.col-1-1
 			+b.image
 				+e.overlay
-					+e("img").item(src="img/bio/bio1-1.jpg")
-				+e.mask
+					+e("img").item--right(src="img/bio/bio1-1.jpg")
+				+e.mask--right
 		+e.col-1-1
 			+b.image
 				+e.overlay--dark
-					+e("img").item(src="img/bio/bio2.jpg")
-				+e.mask
+					+e("img").item--right(src="img/bio/bio2.jpg")
+				+e.mask--right
 	+b.grid.js-scene-2
 		+e.col-2-1
 			+b.image
