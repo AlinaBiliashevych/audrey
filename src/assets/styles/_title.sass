@@ -15,12 +15,14 @@
 		margin: 0
 		padding-top: 4%
 		font-size: 3.5vw
-		line-height: 3.8vw
+		line-height: 2
 		color: #9e9e9e
 		position: relative
 		overflow: hidden
 		padding-left: 10px
 		padding-right: 10px
+		+media(pho)
+			font-size: 5.5vw
 		&::before
 			content: attr(data-letters)
 			position: absolute

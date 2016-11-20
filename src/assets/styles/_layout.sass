@@ -7,22 +7,29 @@
 
 	&__col-1-1
 		+grid(25%, 25%)
+		+media(pho)
+			+grid(50%, 50%)
 
 	&__col-2-2
 		+grid(50%, 50%)
+		+media(pho)
+			+grid(100%, 100%)
 
 	&__col-2-1
 		+grid(50%, 25%)
+		+media(pho)
+			+grid(100%, 50%)
 
 
 	&__col-1-2
 		+grid(25%, 50%)
+		+media(pho)
+			+grid(50%, 100%)
 
 	&__col-2-4
 		+grid(50%, 100%)
-
-	&__col-4-4
-		+grid(100%, 100%)
+		+media(pho)
+			+grid(100%, 200%)
 
 .right
 	float: right
