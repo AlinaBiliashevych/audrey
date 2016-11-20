@@ -7,6 +7,8 @@
 	font-size: 1.5vw
 	line-height: 1.8
 	color: #202020
+	+media(pho)
+		font-size: 3.2vw
 
 	&--bright
 		background: #77d9d3
@@ -21,6 +23,7 @@
 
 	&__content
 		position: absolute
+		top: 0
 		left: 0
 		padding: 12.3%
 		width: 100%
@@ -31,23 +34,15 @@
 		margin-bottom: 6%
 		width: 100%
 
-	p:first-of-type::first-letter
-		float: left
-		font-family: $font-family
-		font-size: 4.5vw
-		line-height: 1.2
-		font-weight: bold
-		margin: 0 3% 0 0
-
-	&--simple
-		p:first-of-type::first-letter
-			float: none
-			display: inline
-			font-family: inherit
-			font-size: inherit
-			line-height: inherit
-			font-weight: inherit
-			margin: inherit
+.fletter::first-letter
+	float: left
+	font-family: $font-family
+	font-size: 4.5vw
+	line-height: 1.2
+	font-weight: bold
+	margin: 0 3% 0 0
+	+media(pho)
+		font-size: 7.2vw
 
 .js-scene-0 .text__content,
 .js-scene-1 .text__content,
