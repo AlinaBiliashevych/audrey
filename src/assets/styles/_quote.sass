@@ -14,8 +14,8 @@
 
 	p
 		font-family: $font-family
-		font-size: 4vw
-		line-height: 0.5
+		font-size: 5vw
+		line-height: 1
 		color: #77d9d3
 		font-weight: bold
 
@@ -34,13 +34,20 @@
 		font-size: 2.8vw
 		line-height: 1.4
 		box-sizing: border-box
+		+media(pho)
+			font-size: 5.5vw
+
+	.fa
+		font-size: 4vw
+		+media(pho)
+			font-size: 6vw
 
 	&--post-v
 		top: 40%
 		height: auto
 
 		blockquote
-			padding: 6%
+			padding: 0 6%
 
 	&--post-h
 		position: static
